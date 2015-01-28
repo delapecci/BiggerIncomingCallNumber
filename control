@@ -1,0 +1,9 @@
+Package: co.zuimei.cydia.tweaks.opincall
+Name: opincall
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Make incoming call number bigggggger for my father
+Maintainer: lichong
+Author: lichong
+Section: Tweaks
