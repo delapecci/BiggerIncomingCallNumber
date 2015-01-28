@@ -1,7 +1,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "CaptainHook.h"
-//#import "OPImageHelper.h"
 
 CHDeclareClass(MPIncomingPhoneCallController);
 
@@ -18,13 +17,6 @@ CHOptimizedMethod(0, self, void, MPIncomingPhoneCallController, viewDidLoad) {
       *_incomingCallNumber = incomingCallNumber = @"NULL";
     }
   }
-
-  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
-                                                    message:(incomingCallNumber)
-                                                    delegate:nil 
-                                                    cancelButtonTitle:@"OK" 
-                                                    otherButtonTitles:nil, nil];
-    [alert show];
 
   if (_view) {
     UIView *bView = *_view;
@@ -56,20 +48,14 @@ CHOptimizedMethod(0, self, void, MPIncomingPhoneCallController, viewDidLoad) {
       [bView addSubview: bLabel];
     }
     else {
-      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"CAO"
+      /*UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"CAO"
                                                     message:(incomingCallNumber)
                                                     delegate:nil 
                                                     cancelButtonTitle:@"OK" 
                                                     otherButtonTitles:nil, nil];
-      [alert show];
+      [alert show];*/
+      NSLog(@"Incoming Number is [%@]", incomingCallNumber);
     }
-  } else {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
-                                                    message:(incomingCallNumber)
-                                                    delegate:nil 
-                                                    cancelButtonTitle:@"OK" 
-                                                    otherButtonTitles:nil, nil];
-    [alert show];
   }
 }
 
